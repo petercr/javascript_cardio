@@ -6,8 +6,8 @@ function reverseString(str) {
     // var to hold str after it is split into an array
     // then the array is reversed and joined back together
     // Solution by Peter Cruckshank @Github - PeterCr
-    let temp = str.split('').reverse().join('');
-    return temp;
+    let revString = str.split('').reverse().join('');
+    return revString;
     
   }
   
@@ -17,7 +17,13 @@ function reverseString(str) {
   // Return true if palindrome and false if not
   // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
   
-  function isPalindrome(str) {}
+  function isPalindrome(str) {
+      // I thought it would be fun to just invoke the function we just made
+      // originally used a if/then statement, but it's unnecessary 
+     let revStr = reverseString(str);
+
+     return str === revStr;
+  }
   
   
   
@@ -50,7 +56,7 @@ function reverseString(str) {
   
   
   // Call Function
-  const output = reverseString('hello');
+  const output = isPalindrome('racecar');
   
   console.log(output);
   
