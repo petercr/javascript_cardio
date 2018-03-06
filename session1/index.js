@@ -42,7 +42,14 @@ function reverseString(str) {
   // CHALLENGE 4: CAPITALIZE LETTERS
   // Return a string with the first letter of every word capitalized
   // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
-  function capitalizeLetters(str) {}
+  function capitalizeLetters(str) {
+    let words = str.toLowerCase().split(' ');
+    for (var i in words){
+       words[i] = words[i].substring(0, 1).toUpperCase() + words[i].substring(1);
+       
+    }
+    return words.join(' ');
+  }
 
 
 
@@ -60,6 +67,6 @@ function reverseString(str) {
 
 
   // Call Function
-  const output = reverseInt(-54321);
+  const output = capitalizeLetters("a place like this");
 
   console.log(output);
